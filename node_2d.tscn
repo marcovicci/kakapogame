@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqp6u1e135181"]
+
+[ext_resource type="Script" uid="uid://bjkl4djwpqjv1" path="res://whistle.gd" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://wm08r685lm7" path="res://kakapo.tscn" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://dsqure1im707a" path="res://character_body_2d.gd" id="4_0hol4"]
+[ext_resource type="Script" uid="uid://b7tuldw0g2pso" path="res://dog.gd" id="4_q6r6c"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_kdubu"]
+vertices = PackedVector2Array(4003.33, -643.477, 4003.33, 975.719, 2817.45, 869.727, 2629.78, -663.391, -3825.54, 963.359, -3950.06, 938.438, -3963.25, -657.438, -2664.54, -763.477, -2270.17, 1003.41, 1203.64, 1916.69, -870.359, 1943.3, -1377.72, -1223.52, 200.039, -1389.95, 1922.75, -1223.67)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8), PackedInt32Array(2, 9, 10, 8, 7, 11, 12, 13, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-3973.33, -666.667, -2666.67, -773.333, -1380, -1233.33, 200, -1400, 1926.67, -1233.33, 2633.33, -673.333, 4013.33, -653.333, 4013.33, 986.667, 2820, 880, 1206.67, 1926.67, -873.333, 1953.33, -2333.33, 1066.67, -3826.67, 973.333, -3960, 946.667)])
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kdubu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
+radius = 43.4166
+
+[node name="root" type="Node2D"]
+
+[node name="Whistle" type="Node2D" parent="."]
+script = ExtResource("1_wtcfe")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Polygon2DBackground" type="Polygon2D" parent="."]
+position = Vector2(-47, 43)
+color = Color(0.0798383, 0.205789, 0.0813922, 1)
+polygon = PackedVector2Array(333, -228, 447, -140, 632, -142, 653, 101, 468, 86, 244, 238, -78, 244, -288, 107, -543, 95, -551, -140, -356, -162, -160, -226, -82, -246, 63, -259)
+
+[node name="Polygon2DPath" type="Polygon2D" parent="."]
+position = Vector2(-47, 43)
+color = Color(0.699252, 0.596488, 0.375983, 1)
+polygon = PackedVector2Array(166, -209, 326, -201, 404, -111, 429, -16, 394, 115, 300, 152, 189, 183, 55, 191, -89, 181, -210, 121, -284, 25, -273, -105, -230, -181, -108, -222, -23, -221, 68, -224)
+
+[node name="kakapo" parent="." node_paths=PackedStringArray("region") instance=ExtResource("2_0hol4")]
+position = Vector2(-97, 0)
+region = NodePath("../NavigationRegion2D")
+
+[node name="kakapo2" parent="." node_paths=PackedStringArray("region") instance=ExtResource("2_0hol4")]
+region = NodePath("../NavigationRegion2D")
+
+[node name="kakapo3" parent="." node_paths=PackedStringArray("region") instance=ExtResource("2_0hol4")]
+position = Vector2(97, 0)
+region = NodePath("../NavigationRegion2D")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+scale = Vector2(0.15, 0.15)
+navigation_polygon = SubResource("NavigationPolygon_kdubu")
+
+[node name="Dog" type="CharacterBody2D" parent="." node_paths=PackedStringArray("region", "navigation_agent")]
+position = Vector2(-222, -26)
+script = ExtResource("4_q6r6c")
+region = NodePath("../NavigationRegion2D")
+navigation_agent = NodePath("NavigationAgent2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dog"]
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_kdubu")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Dog"]
+simplify_path = true
+avoidance_enabled = true
+radius = 30.0
+max_speed = 400.0
+
+[node name="Polygon2D" type="Polygon2D" parent="Dog"]
+position = Vector2(222, 26)
+polygon = PackedVector2Array(-261, -31, -261, -64, -185, -64, -185, -27, -185, 11, -262, 9)
+
+[node name="Moose" type="CharacterBody2D" parent="."]
+position = Vector2(330, -31)
+motion_mode = 1
+script = ExtResource("4_0hol4")
+
+[node name="Polygon2D" type="Polygon2D" parent="Moose"]
+polygon = PackedVector2Array(-12, 104, 0, 106, 25, 97, 40, 71, 41, -71, 26, -97, 0, -107, -31, -91, -42, -72, -46, 66, -25, 98, -23, 98, -23, 98, -23, 98)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moose"]
+position = Vector2(-1, 61)
+shape = SubResource("CircleShape2D_0hol4")
