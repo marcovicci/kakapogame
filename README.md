@@ -4,3 +4,14 @@
 
 ## How to install 
 TODO: walk tanya through Github Desktop install and basic Godot usage
+
+## TODO LIST
+* GitHub repo - DONE!
+* Comment code sensibly for Tanya
+* Start to define different Kakapo states
+* Start to define different Dog states 
+* Whistle mechanic -- pattern recognition for whistles
+
+## TODO LIST (FUTURE)
+* Sprite implementations
+* Parallax and blur/depth of field on surroundings
