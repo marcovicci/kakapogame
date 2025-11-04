@@ -58,3 +58,15 @@ func _on_velocity_computed(safe_velocity: Vector2):
 		#print("Collided with: ", collision.get_collider().name)
 		if collision.get_collider().name == "Moose":
 			moving = false
+
+func herd_kakapo():
+	print("Herding kakapo!")
+	## TODO: Movement calcs to get behind kakapo, relative to moose's position
+	
+func process_whistle():
+	print("Whistle detected")
+	## TODO: State changes on hearing whistle? May be able to be separated into different functions
+
+func bark():
+	print("Barking")
+	## TODO: Broadcast barking and location/radius to nearby kakapo 

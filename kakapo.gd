@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var destination : Vector2
 var moving := false
+var kakapo_state
 
 @export_category("Stats") 
 @export var movement_speed := 20000000.0 
@@ -63,3 +64,11 @@ func target_kakapo():
 	
 func untarget_kakapo():
 	target.visible = false;
+	
+func freeze():
+	print("Freezing");
+	## TODO: adjust kakapo_state, check this variable before doing other movement commands
+
+func eat():
+	print("Eating rimu")
+	## TODO: adjust kakapo_state, check this variable before doing other movement commands
