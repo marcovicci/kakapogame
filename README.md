@@ -6,12 +6,26 @@
 TODO: walk tanya through Github Desktop install and basic Godot usage
 
 ## TODO LIST
-* GitHub repo - DONE!
-* Comment code sensibly for Tanya
-* Start to define different Kakapo states
-* Start to define different Dog states 
-* Whistle mechanic -- pattern recognition for whistles
+- [x] GitHub repo - DONE!
+- [ ] Comment code sensibly for Tanya
+  - [ ] dog
+  - [ ] kakapo
+  - [ ] moose
+  - [ ] whistle
+- [ ] Start to define different Kakapo states
+  - [x] random
+  - [ ] freeze
+  - [ ] fleeing
+  - [ ] moving to rimu 
+- [ ] Start to define different Dog states
+  - [ ] random
+  - [ ] pointing to kakapo
+  - [ ] getting behind kakapo 
+- [ ] Whistle mechanic
+  - [ ] basic whistle framework
+  - [ ] pattern recognition
+  - [ ] UI showing/hiding 
 
 ## TODO LIST (FUTURE)
-* Sprite implementations
-* Parallax and blur/depth of field on surroundings
+- [ ] Sprite implementations
+- [ ] Parallax and blur/depth of field on surroundings
