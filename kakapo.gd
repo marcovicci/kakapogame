@@ -36,6 +36,15 @@ func _physics_process(delta):
 				moving = true
 				navigation_agent.target_position = destination # sets the destination as a target position for NavigationAgent2D
 				navigation_agent.set_target_position(destination)
+			kakapo_state.FREEZE:
+				print("Freeze");
+				moving = false;
+			kakapo_state.EATING:
+				print("Eating");
+				moving = false;
+			kakapo_state.FLEEING:
+				print("Fleeing");
+				# TODO : Find player position, run a line between kakapo and player positon, and reverse it to run away
 	
 	# Do not query when the map has never synchronized and is empty.
 	if NavigationServer2D.map_get_iteration_id(navigation_agent.get_navigation_map()) == 0:
@@ -72,11 +81,3 @@ func target_kakapo():
 	
 func untarget_kakapo():
 	target.visible = false;
-	
-func freeze():
-	print("Freezing");
-	## TODO: adjust kakapo_state, check this variable before doing other movement commands
-
-func eat():
-	print("Eating rimu")
-	## TODO: adjust kakapo_state, check this variable before doing other movement commands

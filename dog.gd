@@ -35,6 +35,10 @@ func _physics_process(delta):
 				moving = true
 				navigation_agent.target_position = destination # sets the destination as a target position for NavigationAgent2D
 				navigation_agent.set_target_position(destination)
+			dog_state.CHASING:
+				print("Chasing");
+			dog_state.GUARDING:
+				print("Guarding");
 	
 	# Do not query when the map has never synchronized and is empty.
 	if NavigationServer2D.map_get_iteration_id(navigation_agent.get_navigation_map()) == 0:
