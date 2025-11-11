@@ -30,7 +30,7 @@ func set_movement_target(movement_target: Vector2):
 
 func _physics_process(delta):
 	if not moving: # if enemy is not moving, pick a new destination
-		match kakapo_state:
+		match state:
 			kakapo_state.CHAOS:
 				destination = (NavigationServer2D.region_get_random_point(region.get_rid(), 1, false)) # get a random point from NavigationRegion2D
 				moving = true
