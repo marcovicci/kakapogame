@@ -23,7 +23,7 @@ TODO: basic running instructions
   - [ ] moving to rimu 
   - [ ] expose useful values (max speed)
 - [ ] Start to define different Dog states
-  - [ ] random
+  - [x] random
   - [ ] pointing to kakapo
   - [ ] getting behind kakapo 
   - [ ] expose useful values (max speed)

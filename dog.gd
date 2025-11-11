@@ -2,9 +2,15 @@ extends CharacterBody2D
 
 var destination : Vector2
 var moving := false
+enum dog_state {
+	CHAOS,
+	CHASING,
+	GUARDING,
+}
 
 @export_category("Stats") 
 @export var movement_speed := 20000000.0 
+@export var state = dog_state.CHAOS
 
 @export_category("Nodes")
 @export var region : NavigationRegion2D ## reference to NavigationRegion2D enemy should walk by default
@@ -23,10 +29,12 @@ func set_movement_target(movement_target: Vector2):
 
 func _physics_process(delta):
 	if not moving: # if enemy is not moving, pick a new destination
-		destination = (NavigationServer2D.region_get_random_point(region.get_rid(), 1, false)) # get a random point from NavigationRegion2D
-		moving = true
-		navigation_agent.target_position = destination # sets the destination as a target position for NavigationAgent2D
-		navigation_agent.set_target_position(destination)
+		match dog_state:
+			dog_state.CHAOS:
+				destination = (NavigationServer2D.region_get_random_point(region.get_rid(), 1, false)) # get a random point from NavigationRegion2D
+				moving = true
+				navigation_agent.target_position = destination # sets the destination as a target position for NavigationAgent2D
+				navigation_agent.set_target_position(destination)
 	
 	# Do not query when the map has never synchronized and is empty.
 	if NavigationServer2D.map_get_iteration_id(navigation_agent.get_navigation_map()) == 0:
