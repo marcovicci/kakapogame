@@ -8,34 +8,28 @@
 ## How to install 
 TODO: basic running instructions 
 
-## Most recent build changes
-- Building a new scene, returning to point-and-click roots :) 
-- New Camera_Target object; can be linked to a "Movement Button" object which tweens the camera to the target's location 
-
-## TODO LIST (OUT OF DATE)
-- [x] GitHub repo built
+## TODO LIST (AS OF 2026)
+### Repository, project stuff
+- [x] Github repo built
 - [ ] Install/run instructions and Godot breakdown in readme
 - [ ] Comment code sensibly for Tanya
-  - [ ] dog
-  - [ ] kakapo
-  - [ ] moose
-  - [ ] whistle
-- [ ] Start to define different Kakapo states
-  - [x] random
-  - [ ] freeze
-  - [ ] fleeing
-  - [ ] moving to rimu 
-  - [ ] expose useful values (max speed)
-- [ ] Start to define different Dog states
-  - [x] random
-  - [ ] pointing to kakapo
-  - [ ] getting behind kakapo 
-  - [ ] expose useful values (max speed)
-- [ ] Whistle mechanic
-  - [ ] basic whistle framework
-  - [ ] pattern recognition
-  - [ ] UI showing/hiding 
+### Game code, scene switching
+- [x] Camera_Target and Movement_Button objects which can move the camera around
+- [ ] Moving the moose to a new scene along with the camera
+### Game code, puzzles
+- [ ] Basic clickable-object framework to trigger animations 
+### Game code, UI
+- [ ] Map screen
+- [ ] Fast travel? 
+- [ ] Journal
+### Graphics
+- [x] Blur shader material added to produce depth of field effects 
+- [ ] Example scene with blur shader material
+- [ ] Sprites implemented
+- [ ] Sprite animations implemented
 
-## TODO LIST (FUTURE)
-- [ ] Sprite implementations
-- [ ] Parallax and blur/depth of field on surroundings
+## Most recent build changes
+### March/April 2026
+- Building a new scene, returning to point-and-click roots :) 
+- New Camera_Target object; can be linked to a "Movement Button" object which tweens the camera to the target's location 
+- Recreated todo list
