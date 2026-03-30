@@ -8,7 +8,11 @@
 ## How to install 
 TODO: basic running instructions 
 
-## TODO LIST
+## Most recent build changes
+- Building a new scene, returning to point-and-click roots :) 
+- New Camera_Target object; can be linked to a "Movement Button" object which tweens the camera to the target's location 
+
+## TODO LIST (OUT OF DATE)
 - [x] GitHub repo built
 - [ ] Install/run instructions and Godot breakdown in readme
 - [ ] Comment code sensibly for Tanya

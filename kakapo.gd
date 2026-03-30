@@ -7,6 +7,8 @@ enum kakapo_state {
 	FREEZE,
 	EATING,
 	FLEEING,
+	CHASED,
+	TAME,
 }
 
 @export_category("Stats") 
@@ -44,8 +46,14 @@ func _physics_process(delta):
 				moving = false;
 			kakapo_state.FLEEING:
 				print("Fleeing");
-				# TODO : Find player position, run a line between kakapo and player positon, and reverse it to run away
-	
+				# TODO : Find player position, run a line between kakapo and player positon, and reverse it to run away?
+				# OR : Find hiding spots around the map, find which one is closer to kakapo and farther from player?
+			kakapo_state.CHASED:
+				print("Chased");
+				# TODO Get barked at! Move away from dog's position. 
+			kakapo_state.TAME:
+				print("Tame");
+				# Moving slowly when they get near you, will stay peacefully near in certain radius
 	# Do not query when the map has never synchronized and is empty.
 	if NavigationServer2D.map_get_iteration_id(navigation_agent.get_navigation_map()) == 0:
 		return

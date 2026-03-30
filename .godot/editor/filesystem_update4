@@ -1,3 +1,4 @@
-res://node_2d.tscn
-res://kakapo.gd
-res://dog.gd
+res://test_scene.tscn
+res://materials/blur.gdshader
+res://test_scene.gdshader
+res://movement_button.tscn

@@ -1,9 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqp6u1e135181"]
+[gd_scene load_steps=7 format=3 uid="uid://cqp6u1e135181"]
 
-[ext_resource type="Script" uid="uid://bjkl4djwpqjv1" path="res://whistle.gd" id="1_wtcfe"]
-[ext_resource type="PackedScene" uid="uid://wm08r685lm7" path="res://kakapo.tscn" id="2_0hol4"]
-[ext_resource type="Script" uid="uid://dsqure1im707a" path="res://character_body_2d.gd" id="4_0hol4"]
-[ext_resource type="Script" uid="uid://b7tuldw0g2pso" path="res://dog.gd" id="4_q6r6c"]
+[ext_resource type="Script" uid="uid://bjkl4djwpqjv1" path="res://whistle.gd" id="1_ie775"]
+[ext_resource type="PackedScene" uid="uid://wm08r685lm7" path="res://kakapo.tscn" id="2_r55bn"]
+[ext_resource type="Script" uid="uid://b7tuldw0g2pso" path="res://dog.gd" id="3_7o235"]
+[ext_resource type="PackedScene" uid="uid://ctxh7eso2bhnl" path="res://moose.tscn" id="4_povt6"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_kdubu"]
 vertices = PackedVector2Array(4003.33, -643.477, 4003.33, 975.719, 2817.45, 869.727, 2629.78, -663.391, -3825.54, 963.359, -3950.06, 938.438, -3963.25, -657.438, -2664.54, -763.477, -2270.17, 1003.41, 1203.64, 1916.69, -870.359, 1943.3, -1377.72, -1223.52, 200.039, -1389.95, 1922.75, -1223.67)
@@ -12,13 +12,10 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-3973.33, -666.667, -26
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kdubu"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
-radius = 43.4166
-
 [node name="root" type="Node2D"]
 
 [node name="Whistle" type="Node2D" parent="."]
-script = ExtResource("1_wtcfe")
+script = ExtResource("1_ie775")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -32,14 +29,14 @@ position = Vector2(-47, 43)
 color = Color(0.699252, 0.596488, 0.375983, 1)
 polygon = PackedVector2Array(166, -209, 326, -201, 404, -111, 429, -16, 394, 115, 300, 152, 189, 183, 55, 191, -89, 181, -210, 121, -284, 25, -273, -105, -230, -181, -108, -222, -23, -221, 68, -224)
 
-[node name="kakapo" parent="." node_paths=PackedStringArray("region") instance=ExtResource("2_0hol4")]
+[node name="kakapo" parent="." node_paths=PackedStringArray("region") instance=ExtResource("2_r55bn")]
 position = Vector2(-97, 0)
 region = NodePath("../NavigationRegion2D")
 
-[node name="kakapo2" parent="." node_paths=PackedStringArray("region") instance=ExtResource("2_0hol4")]
+[node name="kakapo2" parent="." node_paths=PackedStringArray("region") instance=ExtResource("2_r55bn")]
 region = NodePath("../NavigationRegion2D")
 
-[node name="kakapo3" parent="." node_paths=PackedStringArray("region") instance=ExtResource("2_0hol4")]
+[node name="kakapo3" parent="." node_paths=PackedStringArray("region") instance=ExtResource("2_r55bn")]
 position = Vector2(97, 0)
 region = NodePath("../NavigationRegion2D")
 
@@ -49,7 +46,7 @@ navigation_polygon = SubResource("NavigationPolygon_kdubu")
 
 [node name="Dog" type="CharacterBody2D" parent="." node_paths=PackedStringArray("region", "navigation_agent")]
 position = Vector2(-222, -26)
-script = ExtResource("4_q6r6c")
+script = ExtResource("3_7o235")
 region = NodePath("../NavigationRegion2D")
 navigation_agent = NodePath("NavigationAgent2D")
 
@@ -67,14 +64,5 @@ max_speed = 400.0
 position = Vector2(222, 26)
 polygon = PackedVector2Array(-261, -31, -261, -64, -185, -64, -185, -27, -185, 11, -262, 9)
 
-[node name="Moose" type="CharacterBody2D" parent="."]
+[node name="Moose" parent="." instance=ExtResource("4_povt6")]
 position = Vector2(330, -31)
-motion_mode = 1
-script = ExtResource("4_0hol4")
-
-[node name="Polygon2D" type="Polygon2D" parent="Moose"]
-polygon = PackedVector2Array(-12, 104, 0, 106, 25, 97, 40, 71, 41, -71, 26, -97, 0, -107, -31, -91, -42, -72, -46, 66, -25, 98, -23, 98, -23, 98, -23, 98)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Moose"]
-position = Vector2(-1, 61)
-shape = SubResource("CircleShape2D_0hol4")

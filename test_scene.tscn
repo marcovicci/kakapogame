@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjdpa1w0kqg42"]
+
+[ext_resource type="Script" uid="uid://cgx3rma1cdvx2" path="res://Camera_Tweening.gd" id="1_2nij2"]
+[ext_resource type="Texture2D" uid="uid://c5t02mbm87fag" path="res://images/Assets_Sky.png" id="1_sasra"]
+[ext_resource type="Script" uid="uid://dj3eo434vtgrb" path="res://materials/Scaled_Asset.gd" id="2_coq8p"]
+[ext_resource type="PackedScene" uid="uid://ctxh7eso2bhnl" path="res://moose.tscn" id="3_2nij2"]
+[ext_resource type="Texture2D" uid="uid://ms7tswf5t2i" path="res://images/whitebox.png" id="4_coq8p"]
+[ext_resource type="PackedScene" uid="uid://fb0i8co3wche" path="res://camera_target.tscn" id="6_7cbxl"]
+[ext_resource type="PackedScene" uid="uid://cbujm7uciqptt" path="res://movement_button.tscn" id="7_8pr8v"]
+
+[node name="Test_Scene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(761, -118)
+script = ExtResource("1_2nij2")
+Camera_Target = Vector2(784, 13)
+Lerp_Speed = 0.02
+Zoom_Level = Vector2(0.5, 0.5)
+
+[node name="AssetsSky" type="Sprite2D" parent="."]
+texture = ExtResource("1_sasra")
+script = ExtResource("2_coq8p")
+
+[node name="Moose" parent="." instance=ExtResource("3_2nij2")]
+z_index = 999
+z_as_relative = false
+position = Vector2(116, 399)
+
+[node name="Camera_Target" parent="." node_paths=PackedStringArray("Camera") instance=ExtResource("6_7cbxl")]
+position = Vector2(784, 13)
+Zoom_Level = 0.5
+Camera = NodePath("../Camera2D")
+
+[node name="Camera_Target2" parent="." node_paths=PackedStringArray("Camera") instance=ExtResource("6_7cbxl")]
+position = Vector2(2766, 537)
+Zoom_Level = 0.5
+Camera = NodePath("../Camera2D")
+
+[node name="island" type="Node2D" parent="."]
+position = Vector2(-83, -580)
+scale = Vector2(4, 4)
+
+[node name="Whitebox" type="Sprite2D" parent="island"]
+modulate = Color(0.282353, 0.490196, 0.270588, 1)
+position = Vector2(470.69, 219.37)
+scale = Vector2(4.7369, 2.2137)
+texture = ExtResource("4_coq8p")
+
+[node name="Whitebox2" type="Sprite2D" parent="island"]
+modulate = Color(1, 0.847059, 0.243137, 1)
+z_as_relative = false
+position = Vector2(209.69, 164.37)
+scale = Vector2(2.04699, 1.42084)
+texture = ExtResource("4_coq8p")
+
+[node name="Whitebox3" type="Sprite2D" parent="island"]
+modulate = Color(1, 0.795962, 0.993177, 1)
+position = Vector2(713.69, 269.37)
+scale = Vector2(2.04699, 1.42084)
+texture = ExtResource("4_coq8p")
+
+[node name="Movement Button" parent="island" node_paths=PackedStringArray("Camera_Target") instance=ExtResource("7_8pr8v")]
+scale = Vector2(0.573418, 0.573418)
+action_mode = 0
+Camera_Target = NodePath("../../Camera_Target2")
+
+[node name="Movement Button2" parent="island" node_paths=PackedStringArray("Camera_Target") instance=ExtResource("7_8pr8v")]
+offset_left = 586.5
+offset_top = 306.5
+offset_right = 749.5
+offset_bottom = 469.5
+rotation = 3.52554
+scale = Vector2(0.573418, 0.573418)
+action_mode = 0
+Camera_Target = NodePath("../../Camera_Target")

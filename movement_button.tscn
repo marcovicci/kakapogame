@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbujm7uciqptt"]
+
+[ext_resource type="Texture2D" uid="uid://bxjjhbha04n76" path="res://images/white_arrow.png" id="1_k8w0u"]
+[ext_resource type="Script" uid="uid://tfdpruma1y3s" path="res://arrow_button.gd" id="2_qrfcw"]
+
+[node name="Movement Button" type="Button"]
+offset_left = 323.75
+offset_top = 74.25
+offset_right = 486.75
+offset_bottom = 237.25
+button_mask = 7
+icon = ExtResource("1_k8w0u")
+flat = true
+icon_alignment = 1
+script = ExtResource("2_qrfcw")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]

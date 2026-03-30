@@ -37,8 +37,10 @@ func _physics_process(delta):
 				navigation_agent.set_target_position(destination)
 			dog_state.CHASING:
 				print("Chasing");
+				# TODO : Get position of target kakapo and head towards it
 			dog_state.GUARDING:
 				print("Guarding");
+				# Circling around the player
 	
 	# Do not query when the map has never synchronized and is empty.
 	if NavigationServer2D.map_get_iteration_id(navigation_agent.get_navigation_map()) == 0:
