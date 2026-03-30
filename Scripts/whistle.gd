@@ -1,3 +1,4 @@
+# "Extends" means it has all the capabilities of an existing class of object.
 extends Node2D
 
 var mouseY;

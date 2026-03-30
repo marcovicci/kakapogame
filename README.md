@@ -27,8 +27,11 @@
 ## TODO LIST (AS OF 2026)
 ### Repository, project stuff
 - [x] Github repo built
-- [ ] Install/run instructions and Godot breakdown in readme
+- [x] Install/run instructions and Godot breakdown in readme
 - [ ] Comment code sensibly for Tanya
+    - [x] Arrow button
+    - [x] Camera target
+    - [x] Camera tweening
 ### Game code, scene switching
 - [x] Camera_Target and Movement_Button objects which can move the camera around
 - [ ] Moving the moose to a new scene along with the camera
@@ -38,6 +41,10 @@
 - [ ] Map screen
 - [ ] Fast travel? 
 - [ ] Journal
+### Game code, "cutscenes"
+- [ ] Opening scene?
+- [ ] Sailing scene?
+- [ ] Kakapo booming scene?
 ### Graphics
 - [x] Blur shader material added to produce depth of field effects 
 - [ ] Example scene with blur shader material
