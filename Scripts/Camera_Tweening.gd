@@ -1,8 +1,8 @@
 extends Camera2D
 
 @export var Camera_Target : Vector2
-@export var Lerp_Speed : float
-@export var Zoom_Level : Vector2
+@export var Lerp_Speed : float = 0.05
+@export var Zoom_Level : Vector2 = Vector2(0.5,0.5)
 
 func _process(delta):
 	if (self.position != Camera_Target):

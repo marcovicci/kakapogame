@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://fb0i8co3wche"]
+
+[ext_resource type="Script" uid="uid://bmn6ftd4kr0d8" path="res://Scripts/camera_target.gd" id="1_05cio"]
+
+[node name="Camera_Target" type="Node2D"]
+script = ExtResource("1_05cio")
+Zoom_Level = 0.5

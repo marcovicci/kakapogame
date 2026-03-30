@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbujm7uciqptt"]
 
 [ext_resource type="Texture2D" uid="uid://bxjjhbha04n76" path="res://images/white_arrow.png" id="1_k8w0u"]
-[ext_resource type="Script" uid="uid://tfdpruma1y3s" path="res://arrow_button.gd" id="2_qrfcw"]
+[ext_resource type="Script" uid="uid://cpyjamkscd4pb" path="res://Scripts/arrow_button.gd" id="2_qrfcw"]
 
 [node name="Movement Button" type="Button"]
 offset_left = 323.75

@@ -1,4 +1,6 @@
 res://test_scene.tscn
 res://materials/blur.gdshader
 res://test_scene.gdshader
-res://movement_button.tscn
+res://Prefabs/movement_button.tscn
+res://Prefabs/camera_target.tscn
+res://Scripts/Camera_Tweening.gd
