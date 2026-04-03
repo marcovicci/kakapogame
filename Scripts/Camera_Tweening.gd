@@ -5,10 +5,10 @@ extends Camera2D
 # "Exported" variables are the ones you can edit in the Inspector 
 # without touching the code!
 @export var Camera_Target : Vector2
-@export var Lerp_Speed : float = 0.05
+@export var Lerp_Speed : float = 0.01
 @export var Zoom_Level : Vector2 = Vector2(0.5,0.5)
 
-# the "Process" function runs repeatedly, each 'tick' of the game
+# the "Process" function runs repeatedl		print(self.position.distance_to(Player_Target))y, each 'tick' of the game
 func _process(delta):
 	if (self.position != Camera_Target):
 		self.position = self.position.lerp(Camera_Target, Lerp_Speed)

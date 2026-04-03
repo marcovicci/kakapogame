@@ -6,6 +6,8 @@ extends Node2D
 # without touching the code!
 @export var Zoom_Level : float = 0.05
 @export var Camera : Camera2D
+@export var Player : CharacterBody2D
+@export var Player_Target_Position : Vector2
 var Zoom_Level_Vector : Vector2
 
 # "Ready" functions run as the scene loads
@@ -16,3 +18,4 @@ func _ready():
 # and the set zoom level
 func activate():
 	Camera.update_target(self,Zoom_Level_Vector)
+	Player.update_target(Player_Target_Position)

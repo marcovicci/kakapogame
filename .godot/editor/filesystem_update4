@@ -1,10 +1,8 @@
-res://test_scene.tscn
+res://Prefabs/moose.tscn
 res://materials/blur.gdshader
 res://test_scene.gdshader
-res://Scripts/arrow_button.gd
+res://test_scene.tscn
+res://Prefabs/camera_target.tscn
+res://Scripts/character_body_2d.gd
 res://Scripts/camera_target.gd
 res://Scripts/Camera_Tweening.gd
-res://Scripts/character_body_2d.gd
-res://Scripts/dog.gd
-res://Scripts/kakapo.gd
-res://Scripts/whistle.gd

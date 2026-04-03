@@ -34,7 +34,7 @@
     - [x] Camera tweening
 ### Game code, scene switching
 - [x] Camera_Target and Movement_Button objects which can move the camera around
-- [ ] Moving the moose to a new scene along with the camera
+- [x] Moving the moose to a new scene along with the camera
 ### Game code, puzzles
 - [ ] Basic clickable-object framework to trigger animations 
 ### Game code, UI
@@ -57,3 +57,4 @@
 - New Camera_Target object; can be linked to a "Movement Button" object which tweens the camera to the target's location 
 - Recreated todo list
 - Better organization of project assets
+- Moose moves along with camera, moose position can be set manually in each Camera_Target node

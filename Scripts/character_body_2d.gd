@@ -1,10 +1,15 @@
 # "Extends" means it has all the capabilities of an existing class of object.
 extends CharacterBody2D
 
-@export var speed = 200
+@export var speed = 1000
+@export var Player_Target : Vector2
+@export var Min_Distance = 10.0
 
 # default value higher than our current number of kakapo
 var target = 666;
+
+func _ready():
+	Player_Target = self.position
 
 func get_input():
 	velocity = Vector2()
@@ -21,9 +26,15 @@ func get_input():
 	velocity = velocity.normalized() * speed
 
 func _physics_process(delta):
-	get_input()
+	if (self.position.distance_to(Player_Target) > Min_Distance):
+		velocity = position.direction_to(Player_Target) * speed
+	else: 
+		velocity = Vector2(0,0)
 	move_and_slide()
-
+	
+func update_target(node):
+	Player_Target = node
+	
 func target_kakapo():
 	var kakapo_list = get_tree().get_nodes_in_group('kakapo')
 	target += 1
