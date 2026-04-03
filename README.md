@@ -32,6 +32,10 @@
     - [x] Arrow button
     - [x] Camera target
     - [x] Camera tweening
+- [ ] Properties breakdown for various important types of nodes
+    - [ ] Camera (default target, lerp speed, zoom level)
+    - [ ] Camera_Target (transform, zoom level, moose position)
+    - [ ] Moose (speed, min_distance)
 ### Game code, scene switching
 - [x] Camera_Target and Movement_Button objects which can move the camera around
 - [x] Moving the moose to a new scene along with the camera
@@ -49,7 +53,17 @@
 - [x] Blur shader material added to produce depth of field effects 
 - [ ] Example scene with blur shader material
 - [ ] Sprites implemented
+    - [ ] Moose
+    - [x] Kakapo
+    - [ ] Dog 
 - [ ] Sprite animations implemented
+    - [ ] Moose
+    - [ ] Kakapo
+    - [ ] Dog 
+### Audio 
+- [ ] Ambient audio? 
+- [ ] User interface / user responsive audio?
+- [ ] Music?
 
 ## Most recent build changes
 ### March/April 2026

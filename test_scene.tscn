@@ -20,7 +20,7 @@ texture = ExtResource("1_sasra")
 script = ExtResource("2_coq8p")
 
 [node name="Moose" parent="." instance=ExtResource("4_8pr8v")]
-position = Vector2(192, 94)
+position = Vector2(187, 3)
 
 [node name="Camera_Target" parent="." node_paths=PackedStringArray("Camera", "Player") instance=ExtResource("5_buypi")]
 position = Vector2(784, 13)
