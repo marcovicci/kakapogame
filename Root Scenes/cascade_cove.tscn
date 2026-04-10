@@ -1,0 +1,66 @@
+[gd_scene load_steps=12 format=3 uid="uid://dr4wodfg4fvy3"]
+
+[ext_resource type="PackedScene" uid="uid://ctxh7eso2bhnl" path="res://Prefabs/moose.tscn" id="1_5ca5s"]
+[ext_resource type="Texture2D" uid="uid://bgk34ir5fnl3o" path="res://images/Cascade_Cove/cascade_cove_01_CC_background_07.png" id="1_6vn5s"]
+[ext_resource type="Texture2D" uid="uid://6ul00k4v8nfr" path="res://images/Cascade_Cove/cascade_cove_01_cascade_cove.png" id="1_wnvt8"]
+[ext_resource type="Texture2D" uid="uid://dhax74xvpgnak" path="res://images/Cascade_Cove/cascade_cove_01_CC_Back_06.png" id="2_i77pu"]
+[ext_resource type="Script" uid="uid://duq84vttmir22" path="res://Scripts/Camera_Tweening.gd" id="2_nd6wy"]
+[ext_resource type="Texture2D" uid="uid://csgihys2grjd1" path="res://images/Cascade_Cove/cascade_cove_01_CC_path_05.png" id="3_qt8c0"]
+[ext_resource type="Texture2D" uid="uid://coiuythgcce46" path="res://images/Cascade_Cove/cascade_cove_01_CC_Front_04.png" id="3_xdc1m"]
+[ext_resource type="Texture2D" uid="uid://dqvfntd2wxsup" path="res://images/Cascade_Cove/cascade_cove_01_CC_boat.png" id="4_4b6gr"]
+[ext_resource type="Texture2D" uid="uid://bsxcki6uluf5x" path="res://images/Cascade_Cove/cascade_cove_01_CC_Front_03.png" id="8_o4miv"]
+[ext_resource type="Texture2D" uid="uid://uyjfgig24ibk" path="res://images/Cascade_Cove/cascade_cove_01_CC_Front_02.png" id="9_xdc1m"]
+[ext_resource type="Texture2D" uid="uid://brghe2ts6rm7c" path="res://images/Cascade_Cove/cascade_cove_01_CC_Front_01.png" id="10_4b6gr"]
+
+[node name="Cascade_Cove" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(494, -227)
+scale = Vector2(0.296143, 0.296143)
+texture = ExtResource("1_6vn5s")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(3883.26, -1080.56)
+texture = ExtResource("2_i77pu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background"]
+position = Vector2(1259.53, -101.302)
+texture = ExtResource("3_xdc1m")
+
+[node name="boat" type="Sprite2D" parent="."]
+position = Vector2(-582, -40)
+scale = Vector2(0.296143, 0.296143)
+texture = ExtResource("4_4b6gr")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(761, -118)
+script = ExtResource("2_nd6wy")
+Camera_Target = Vector2(500, -220)
+Zoom_Level = Vector2(0.55, 0.55)
+
+[node name="Path" type="Sprite2D" parent="."]
+position = Vector2(762, 31)
+scale = Vector2(0.296143, 0.296143)
+texture = ExtResource("3_qt8c0")
+
+[node name="Moose" parent="." instance=ExtResource("1_5ca5s")]
+position = Vector2(-33, 45)
+
+[node name="Foreground" type="Sprite2D" parent="."]
+position = Vector2(1472, -173)
+scale = Vector2(0.296143, 0.296143)
+texture = ExtResource("8_o4miv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Foreground"]
+position = Vector2(-2978.29, 368.066)
+texture = ExtResource("9_xdc1m")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Foreground"]
+position = Vector2(-2694.65, 354.559)
+texture = ExtResource("10_4b6gr")
+
+[node name="example" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(494, -227)
+scale = Vector2(0.296143, 0.296143)
+texture = ExtResource("1_wnvt8")

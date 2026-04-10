@@ -50,10 +50,11 @@
 - [ ] Sailing scene?
 - [ ] Kakapo booming scene?
 ### Graphics
-- [x] Blur shader material added to produce depth of field effects 
+- [x] Blur shader material to produce depth of field effects 
+- [ ] Altering z-order of moose and objects when you move "in front of" and "behind" things
 - [ ] Example scene with blur shader material
 - [ ] Sprites implemented
-    - [ ] Moose
+    - [x] Moose
     - [x] Kakapo
     - [ ] Dog 
 - [ ] Sprite animations implemented
@@ -72,3 +73,4 @@
 - Recreated todo list
 - Better organization of project assets
 - Moose moves along with camera, moose position can be set manually in each Camera_Target node
+- Imported Cascade Cove assets.

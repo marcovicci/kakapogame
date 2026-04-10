@@ -30,6 +30,7 @@ func _physics_process(delta):
 		velocity = position.direction_to(Player_Target) * speed
 	else: 
 		velocity = Vector2(0,0)
+	get_input()
 	move_and_slide()
 	
 func update_target(node):
