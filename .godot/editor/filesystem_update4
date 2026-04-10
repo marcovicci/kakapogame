@@ -2,7 +2,6 @@ res://Prefabs/moose.tscn
 res://materials/blur.gdshader
 res://test_scene.gdshader
 res://test_scene.tscn
+res://Root Scenes/cascade_cove.tscn
 res://Prefabs/camera_target.tscn
 res://Scripts/character_body_2d.gd
-res://Scripts/camera_target.gd
-res://Scripts/Camera_Tweening.gd

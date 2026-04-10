@@ -19,20 +19,17 @@ Camera_Target = Vector2(784, 13)
 texture = ExtResource("1_sasra")
 script = ExtResource("2_coq8p")
 
-[node name="Moose" parent="." instance=ExtResource("4_8pr8v")]
-position = Vector2(187, 3)
-
 [node name="Camera_Target" parent="." node_paths=PackedStringArray("Camera", "Player") instance=ExtResource("5_buypi")]
 position = Vector2(784, 13)
 Camera = NodePath("../Camera2D")
-Player = NodePath("../Moose")
+Player = NodePath("../island/Moose")
 Player_Target_Position = Vector2(197, 180)
 
 [node name="Camera_Target2" parent="." node_paths=PackedStringArray("Camera", "Player") instance=ExtResource("5_buypi")]
 position = Vector2(2766, 537)
 Camera = NodePath("../Camera2D")
-Player = NodePath("../Moose")
-Player_Target_Position = Vector2(3265, 190)
+Player = NodePath("../island/Moose")
+Player_Target_Position = Vector2(800, 190)
 
 [node name="island" type="Node2D" parent="."]
 position = Vector2(-83, -580)
@@ -69,3 +66,7 @@ offset_bottom = 469.5
 rotation = 3.52554
 scale = Vector2(0.573418, 0.573418)
 Camera_Target = NodePath("../../Camera_Target")
+
+[node name="Moose" parent="island" instance=ExtResource("4_8pr8v")]
+position = Vector2(67.5, 145.75)
+scale = Vector2(0.25, 0.25)
