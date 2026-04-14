@@ -1,7 +1,8 @@
-res://Prefabs/moose.tscn
+res://test_scene.tscn
 res://materials/blur.gdshader
 res://test_scene.gdshader
-res://test_scene.tscn
-res://Root Scenes/cascade_cove.tscn
+res://3d_scene.gdshader
 res://Prefabs/camera_target.tscn
-res://Scripts/character_body_2d.gd
+res://Prefabs/moose.tscn
+res://Root Scenes/cascade_cove.tscn
+res://3d_scene.tscn

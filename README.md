@@ -74,3 +74,5 @@
 - Better organization of project assets
 - Moose moves along with camera, moose position can be set manually in each Camera_Target node
 - Imported Cascade Cove assets.
+- Building a 3D scene to play around with layering assets and allowing the moose to move behind trees :) 
+- Experimenting with built in DOF blur, lighting and shadows to simplify Tanya's rendering process!
